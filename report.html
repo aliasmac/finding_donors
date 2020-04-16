@@ -13900,27 +13900,33 @@ Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p><strong>Decision Trees</strong></p>
+<p><strong>Decision Trees</strong> [1][2]</p>
 <ul>
 <li>Real world application: Netflix recommendation</li>
 <li>Strengths and performance: It’s a failry intuitive model to both understand and explain, excludes unimportant features, extremely fast at classifying unknown records</li>
 <li>Weaknesses and performance: has a tendency to overfit i.e. its a high vairance algorithm, doesn't generalize well to new datasets </li>
 <li>Suitability: Decision Trees are applicable for continuous and categorical features just like the data set</li>
 </ul>
-<p><strong>Ada Boost</strong></p>
+<p><strong>Ada Boost</strong> [3]</p>
 <ul>
 <li>Real world application: face detection</li>
 <li>Strengths and performance: helps to reduce variance by averaging overfitting models and can model complex boundaries (non-linear data) quite well</li>
 <li>Weaknesses and performance: they’re not particularly intuitive to undertsand and training is time consuming</li>
 <li>Suitability: the data set has quite a few features of different type which are catagorical and continuos in nature, thus using an ensemble method which has classifiers suited to both would lead to a more accurate outcome </li>
 </ul>
-<p><strong>SVMs</strong></p>
+<p><strong>SVMs</strong> [4]</p>
 <ul>
 <li>Real world application: Hand writing recognition </li>
 <li>Strengths and performance: Effective in high dimensional spaces, still effective in cases where number of dimensions is greater than the number of samples, uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.</li>
 <li>Weaknesses and performance: If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial. SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation.</li>
 <li>Suitability: Sample size is relatively large but less than 100k and algorithm worls well as a binary classifier </li>
 </ul>
+<ol>
+<li><a href="https://www.oreilly.com/library/view/machine-learning-with/9781787121515/697c4c5f-1109-4058-8938-d01482389ce3.xhtml">https://www.oreilly.com/library/view/machine-learning-with/9781787121515/697c4c5f-1109-4058-8938-d01482389ce3.xhtml</a></li>
+<li>Udacity Nano Degree</li>
+<li><a href="https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/">https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/svm.html">https://scikit-learn.org/stable/modules/svm.html</a></li>
+</ol>
 
 </div>
 </div>
@@ -14229,7 +14235,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>The Adaboost combines a series of weak learners, we can denote them as D1, D2 and D3. They combine to form a strong learner.</p>
+<p>The Adaboost combines a series of weak learners, we can denote them as D1, D2 and D3. They combine to form a strong learner. [1]</p>
 <p>Step 1: The first weak learner (D1) picks a subset of the training data, assiging equal weight to each prediction. We train the model on the subset of data and then test the model on the testing data.</p>
 <p>Step 2: Next we measure error across each point we predicted with D1 and we will find that there are some points that are miss classified. So these points are given ‘extra’ weight so that when we run our second weak learner (D2) the chances that they are picked at random are increased.</p>
 <p>Step 3: Once we’ve built D2 we again train, test and measure error and repeat process of giving more weigth to misclassified points.</p>
